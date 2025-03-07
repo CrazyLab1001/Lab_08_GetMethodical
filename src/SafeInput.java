@@ -35,4 +35,20 @@ public class SafeInput {
             }
         } while (!done);
         return result;
-} }
+} public static double getDouble(Scanner pipe, String prompt) {
+        double result = 0;
+        boolean done = false;
+        String trash = "";
+        do {
+            System.out.print("\n" + prompt + ": ");
+            if (pipe.hasNextDouble()) {
+                result = pipe.nextDouble();
+                pipe.nextLine();
+                done = true;
+            } else {
+                trash = pipe.nextLine();
+                System.out.println("Please print a valid input, unlike: " + trash);
+            }
+        } while (!done);
+        return result;
+    } }
