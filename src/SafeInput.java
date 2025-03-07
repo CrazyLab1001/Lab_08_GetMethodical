@@ -35,4 +35,4 @@ public class SafeInput {
             }
         } while (!done);
         return result;
-}
+} }
