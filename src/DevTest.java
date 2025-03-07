@@ -14,5 +14,8 @@ public class DevTest {
         int rangedInt = 0;
         new Scanner(System.in);
         rangedInt = SafeInput.getRangedInt(in, "Now I need a ranged number, 1 through 12! ", 1, 12);
+        double rangedDouble = 0;
+        new Scanner(System.in);
+        rangedDouble = SafeInput.getRangedDouble(in, "Now a ranged number between 0.5 and 32.84! ", .5, 32.84);
     }
 }

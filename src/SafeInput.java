@@ -50,9 +50,9 @@ public class SafeInput {
                 System.out.println("Please print a valid input, unlike: " + trash);
             }
         } while (!done);
-        return result;}
+         return result;}
 
-    public static int getRangedInt(Scanner pipe, String prompt, int low, int high) {
+   public static int getRangedInt(Scanner pipe, String prompt, int low, int high) {
             int result = 0;
             boolean done = false;
             String trash = "";
@@ -72,4 +72,25 @@ public class SafeInput {
                     System.out.println("Please insert a valid input unlike: " + trash ); }
             } while (!done);
             return result; }
+
+    public static double getRangedDouble(Scanner pipe, String prompt, double low, double high) {
+        double result = 0;
+        boolean done = false;
+        String trash = "";
+        do {
+            System.out.print("\n" + prompt + ": ");
+            if (pipe.hasNextDouble())
+            {
+                result = pipe.nextDouble();
+                pipe.nextLine();
+                if (result >= low && result <= high) {
+                    done = true;
+                } else {
+                    System.out.println("Please put in the ranged input unlike the value: " + result );
+                }
+            } else {
+                trash = pipe.nextLine();
+                System.out.println("Please insert a valid input unlike: " + trash ); }
+        } while (!done);
+        return result; }
     }
