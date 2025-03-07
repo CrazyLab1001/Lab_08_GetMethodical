@@ -93,4 +93,27 @@ public class SafeInput {
                 System.out.println("Please insert a valid input unlike: " + trash ); }
         } while (!done);
         return result; }
+    public static boolean getYNConfirm(Scanner pipe, String prompt) {
+        boolean result = false;
+        String YNOption = "";
+        boolean done = false;
+        String trash = "";
+        do {
+            System.out.print("\n" + prompt + ": ");
+            YNOption = pipe.nextLine();
+            switch (YNOption) {
+                case "Y":
+                    result = true;
+                    done = true;
+                    break;
+                case "N":
+                    result = false;
+                    break;
+                default:
+                    trash = YNOption;
+                    System.out.println("Please insert a valid input unlike: " + trash );
+            }
+        } while (!done);
+        return result;
+    }
     }
