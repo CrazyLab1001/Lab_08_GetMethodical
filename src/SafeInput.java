@@ -101,6 +101,7 @@ public class SafeInput {
         do {
             System.out.print("\n" + prompt + ": ");
             YNOption = pipe.nextLine();
+            YNOption = YNOption.toUpperCase();
             switch (YNOption) {
                 case "Y":
                     result = true;
