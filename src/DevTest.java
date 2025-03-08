@@ -23,21 +23,7 @@ public class DevTest {
         forTrueYforFalseN = SafeInput.getYNConfirm(in, "Do you want to stop with this question?"); } while (!forTrueYforFalseN);
         String regExOption = "";
         new Scanner(System.in);
-        regExOption = getRegEXString(in, "Now insert your SSN ;)", "\\d{3}-\\d{2}-\\d{4}");
+        regExOption = SafeInput.getRegEXString(in, "Now insert your SSN ;)", "\\d{3}-\\d{2}-\\d{4}");
         System.out.println("DevTest over!");
     }
-    private static String getRegEXString (Scanner pipe, String prompt, String regEXPattern) {
-        String value = "";
-        boolean done = false;
-        do {
-            System.out.println( "\n" + prompt + ": ");
-            value = pipe.nextLine();
-            value = value.toUpperCase();
-            if (value.matches(regEXPattern)){
-                done = true;
-            } else {
-                System.out.println("Invalid input! Please input a valid option, unlike: " + value);
-            }
-        } while (!done);
-        return value; } 
 }

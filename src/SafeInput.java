@@ -117,4 +117,18 @@ public class SafeInput {
         } while (!done);
         return result;
     }
+    public static String getRegEXString (Scanner pipe, String prompt, String regEXPattern) {
+        String value = "";
+        boolean done = false;
+        do {
+            System.out.println( "\n" + prompt + ": ");
+            value = pipe.nextLine();
+            value = value.toUpperCase();
+            if (value.matches(regEXPattern)){
+                done = true;
+            } else {
+                System.out.println("Invalid input! Please input a valid option, unlike: " + value);
+            }
+        } while (!done);
+        return value; }
     }
