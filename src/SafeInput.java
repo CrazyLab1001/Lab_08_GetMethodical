@@ -109,6 +109,7 @@ public class SafeInput {
                     break;
                 case "N":
                     result = false;
+                    done = true;
                     break;
                 default:
                     trash = YNOption;
