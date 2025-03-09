@@ -9,7 +9,7 @@ public class Reggie {
         SSNTotally = SafeInput.getRegEXString(in, "Insert your SSN ;)", "\\d{3}-\\d{2}-\\d{4}");
         String bearcatID = "";
         new Scanner(System.in);
-        bearcatID = SafeInput.getRegEXString(in, "Insert your Bearcat ID ;)", "^(M|m)\\d{5}");
+        bearcatID = SafeInput.getRegEXString(in, "Insert your Bearcat ID ;)", "^(M|m)\\d{8}");
         String menuChoice = "";
         new Scanner(System.in);
         menuChoice = SafeInput.getRegEXString(in, "Open, Save, View, or Quit? (O/S/V/Q)", "^[OoSsVvQq]$");
